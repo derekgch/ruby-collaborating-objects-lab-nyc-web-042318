@@ -36,7 +36,7 @@ class Artist
     end
 
     if k == nil
-       k = Song.new(name)
+       k = Artist.new(name)
     else
       k
     end
