@@ -15,8 +15,8 @@ class MP3Importer
   end
 
   def files
+    path = './db/test/'
 
-    
      a = File.basename(path, ".mp3") # => "xyz"
     path_ = path + "/**/*.mp3"
     path2 = path + "/**/*"
