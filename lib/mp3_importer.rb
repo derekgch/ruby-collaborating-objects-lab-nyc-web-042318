@@ -36,4 +36,4 @@ class MP3Importer
 
 end
 
-MP3Importer.new('./db/test/').files
+MP3Importer.new('./db/test').files
