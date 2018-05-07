@@ -17,6 +17,7 @@ class MP3Importer
   def files
 
      a = File.basename(path, ".mp3") # => "xyz"
+     e =Dir[path]
     path_ = path + "/**/*.mp3"
     path2 = path + "/**/*"
     b =Dir[path_].map{ |f| File.basename(f,".mp3") }
