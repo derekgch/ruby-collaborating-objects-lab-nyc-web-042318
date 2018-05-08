@@ -21,6 +21,7 @@ class MP3Importer
     path_ = path + "/**/*.mp3"
     path2 = path + "/**/*"
     path3 = path + "/**/*.*"
+    path4 = path + "/**/"
     b =Dir[path_].map{ |f| File.basename(f,".mp3") }
     d =Dir[path2].map{ |f| File.basename(f)}
     c = Dir[path_].select{ |f| File.file? f }.map{ |f| File.basename(f)}
