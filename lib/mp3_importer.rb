@@ -23,6 +23,7 @@ class MP3Importer
     b =Dir[path_].map{ |f| File.basename(f,".mp3") }
     d =Dir[path2].map{ |f| File.basename f }
     c = Dir[path_].select{ |f| File.file? f }.map{ |f| File.basename f }
+    f = Dir[path_].select{ |f| File.extname == ".mp3" }.map{ |f| File.basename f } 
 
     binding.pry
   end
