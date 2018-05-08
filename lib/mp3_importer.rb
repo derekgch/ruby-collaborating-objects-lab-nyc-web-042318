@@ -15,7 +15,10 @@ class MP3Importer
   end
 
   def files
-
+    out_puts = File.new("out.txt", "w")
+    out_puts.puts("output to file.")
+    out_puts.close
+    
      a = File.basename(path, ".mp3") # => "xyz"
      e =Dir[path]
     path_ = path + "/**/*.mp3"
@@ -41,3 +44,4 @@ class MP3Importer
 end
 
 MP3Importer.new('./db/test').files
+
