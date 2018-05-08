@@ -36,7 +36,7 @@ class MP3Importer
     puts f
 
     out_puts.close
-    # binding.pry
+    binding.pry
   end
 
   # def import
