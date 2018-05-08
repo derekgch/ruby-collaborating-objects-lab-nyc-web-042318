@@ -17,8 +17,8 @@ class MP3Importer
   def files
     out_puts = File.new("out.txt", "w")
     out_puts.puts("output to file.")
-    out_puts.close
-    
+
+
      a = File.basename(path, ".mp3") # => "xyz"
      e =Dir[path]
     path_ = path + "/**/*.mp3"
@@ -31,6 +31,7 @@ class MP3Importer
     f = Dir[path3].select{ |f| File.extname(f) == ".mp3" }.map{ |f| File.basename(f)}
     Dir[path2].select{ |f| File.file?(f)}.map{ |f| File.basename(f)}
 
+    out_puts.close
     binding.pry
   end
 
@@ -44,4 +45,3 @@ class MP3Importer
 end
 
 MP3Importer.new('./db/test').files
-
