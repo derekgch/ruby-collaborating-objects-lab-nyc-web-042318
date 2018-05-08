@@ -31,8 +31,8 @@ class MP3Importer
     f = Dir[path3].select{ |f| File.extname(f) == ".mp3" }.map{ |f| File.basename(f)}
     Dir[path2].select{ |f| File.file?(f)}.map{ |f| File.basename(f)}
 
-    out_puts b
-    out_puts c
+    out_puts.puts b
+    out_puts.puts c
     puts f
 
     out_puts.close
